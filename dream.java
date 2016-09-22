@@ -10,7 +10,7 @@ public class dream {
 		System.out.println("Hello, please enter your favorite color ");
 		color = input.nextString();
 		
-	  System.out.println("Hello, please enter your favorite food ");
+		System.out.println("Hello, please enter your favorite food ");
 		food = input.nextString();
 		
 		System.out.println("Hello, please enter your favorite animal ");
@@ -18,5 +18,7 @@ public class dream {
 		
 		System.out.println("Hello, please enter the name of a relative or friend ");
 		name = input.nextString();
+		
+		System.out.println("I had a dream that " + name + " ate a " + color + " " + animal + " and said it tasted like " + food +"!")
 	}
 }
