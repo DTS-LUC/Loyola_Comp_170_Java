@@ -11,6 +11,12 @@ public class Exam1 {
 		System.out.println("Hello, please enter your exam score");
 		//Store user input from scanner
 		double exam = input.nextDouble();
+
+		//Verify proper range for an exam score
+		while (exam > 100 || exam < 0) {
+			System.out.println("Invalid input! Please enter a value between 0 & 100");
+			exam = input.nextDouble();
+		}
 		
 		//Create a variable for how the user did
 		String result;
@@ -20,13 +26,13 @@ public class Exam1 {
 			result = "Awesome!";
 		}
 		else if (exam >= 80) {
-			result = "Pretty good."
+			result = "Pretty good.";
 		}
 		else if (exam > = 70) {
-			result = "Not so great..."
+			result = "Not so great...";
 		}
 		else {
-			result = "Awful..."
+			result = "Awful...";
 		}
 
 		//Output the user score and result
