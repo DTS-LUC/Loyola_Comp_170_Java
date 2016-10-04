@@ -28,7 +28,7 @@ public class Exam1 {
 		else if (exam >= 80) {
 			result = "Pretty good.";
 		}
-		else if (exam > = 70) {
+		else if (exam >= 70) {
 			result = "Not so great...";
 		}
 		else {
