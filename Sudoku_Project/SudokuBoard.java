@@ -11,9 +11,10 @@ public class SudokuBoard
 
 	public static final int WIDTH = 9;
 	public static final int HEIGHT = 9;
-	SudokuSolution sltn = new SudokuSolution();
+	public static final int HOLE = 0;
+	SudokuSolution solution = new SudokuSolution();
 	Random rdm = new Random();
-
+	int[][]	board;
 
 
 
@@ -21,7 +22,7 @@ public class SudokuBoard
 	public SudokuBoard()
 	{
 		board = new int[WIDTH][HEIGHT];
-		sltn.makeNewSolution();
+		solution = new SudokuSolution();
 	}
 
 	//	Method for creating playable board.		Takes blanks parameter
@@ -41,152 +42,90 @@ public class SudokuBoard
 
 	public void newSolution()
 	{
-		sltn.makeNewSolution();
+		solution.makeNewSolution();
 
 		for (int x = 0; x < 9; x++)
 		{
 			for (int y = 0; y < 9; y++)
 			{
-				board[x][y] = sltn.getValue(x,y);
+				board[x][y] = solution.getValue(x,y);
 			}
 		}
 	}
 
-	public void createBlanks( int blanks)
+	public void createBlanks(int blanks)
 	{
 		int row;
 		int	col;
-		int temp;
+
 		int	placed = 0;
 
 		while (placed < blanks)
 		{
-			placed++;
-
 			row = rdm.nextInt(8);
 			col = rdm.nextInt(8);
 
-			temp = board[row][col];
-			board[row][col] = 0;
-
-			if (temp == 0)
+			if(board[row][col] != HOLE)
 			{
-				board[row][col] = temp;
-				placed--;
-			}
-			else if (oneSolution(temp, row, col) == false)
-			{
-				board[row][col] = temp;
-				placed--;
-			}
-		}
-
-		for(int x = 0; x < 9; x++)
-		{
-			for(int y = 0; y < 9; y++)
-			{
-				if(board[x][y] == 10)
+				if(testHole(row, col))
 				{
-					board[x][y] = 0;
+					board[row][col] = HOLE;
+					placed++;
 				}
 			}
 		}
 	}
 
-
-
-	public	boolean oneSolution(int temp, int row, int col)
+	public boolean testHole(int row, int col)
 	{
-		int checkVal;
+		int prevVal;
 
-		checkVal = 1;
-
-		while (checkVal <= 10)
+		prevVal = board[row][col];
+		board[row][col] = HOLE;
+		
+		if(isValid(row, col, prevVal))
 		{
-			board[row][col] = checkVal;
+			board[row][col] = prevVal;
+			return false;
+		}
 
-			if (checkVal != temp && possibleSudoku(row, col) == true)
-			{
-				return false;
+		return true;
+	}
+
+	private boolean isValid(int row, int col, int check)
+	{
+		for(int x = 0; x < WIDTH; x++)
+		{
+		    for(int y = 0; y < HEIGHT; y++)
+		    {
+				if(board[x][y] == HOLE)
+				{
+					for (int temp = 1; temp <= 9; temp++)
+					{
+						if(x == row && y == col && temp == check)
+						{
+							temp++;
+						}
+								if(temp < 10 && validMove(x, y, temp))
+								{
+									board[x][y] = temp;
+								
+									if(isValid(row, col, check))
+									{
+										board[x][y] = HOLE;
+										return true;
+									}
+								}
+					}
+					
+					board[x][y] = HOLE;
+					return false;
+				}
 			}
-			checkVal++;
 		}
 		return true;
 	}
 
-	public boolean possibleSudoku(int row, int col)
-	{
-
-		for(int x = 0; x < 9; x++)
-		{
-			for(int y = 0; y < 9; y++)
-			{
-				if(board[x][y] == 0)
-				{
-					if(fillCell(x,y))
-					{
-						return false;
-					}
-					else
-					{
-						return true;
-					}
-				}
-			}
-		}
-		return false;
-	}
-
-
-
-	public boolean fillCell(int x, int y)
-	{
-	    int nextX = x;
-	    int nextY = y;
-	    int[] toCheck = {1,2,3,4,5,6,7,8,9};
-
-	    int tmp = 0;
-	    int current = 0;
-	    int top = toCheck.length;
-
-	    for(int i=top-1;i>0;i--)
-	    {
-	        current = rdm.nextInt(i);
-	        tmp = toCheck[current];
-	        toCheck[current] = toCheck[i];
-	        toCheck[i] = tmp;
-	    }
-	    
-	    for(int i=0;i<toCheck.length;i++)
-	    {
-	        if(validMove(x, y, toCheck[i]))
-	        {
-	            board[x][y] = toCheck[i];
-	            if(x == 8)
-	            {
-	                if(y == 8)
-	                    return true;//We're done!  Yay!
-	                else
-	                {
-	                    nextX = 0;
-	                    nextY = y + 1;
-	                }
-	            }
-	            else
-	            {
-	                nextX = x + 1;
-	            }
-	            if(fillCell(nextX, nextY))
-	                return true;
-	        }
-	    }
-	    board[x][y] = 0;
-	    return false;
-	}
-
-	// validMove takes parameters row, col, and numCheck.
-	//		This method returns true if there
-	//		are no repeats in the row, column, or box.
 	private boolean validMove(int row, int col, int numCheck)
 	{
 		int rowStart;
@@ -225,10 +164,12 @@ public class SudokuBoard
 	// Prints Board on stdout
 	public void printBoard()
 	{
-	    for(int i=0;i<9;i++)
+	    for(int i = 0; i < 9; i++)
 	    {
-	        for(int j=0;j<9;j++)
+	        for(int j = 0; j < 9; j++)
+	        {
 	            System.out.print(board[i][j] + "  ");
+	        }
 	        System.out.println();
 	    }
 	    System.out.println();
@@ -236,17 +177,15 @@ public class SudokuBoard
 
 	public void printSolution()
 	{
-		sltn.printSolution();
+		solution.printSolution();
 	}
 
-	// public static void main(String[] args)
-	// {
-	// 	SudokuBoard sg = new SudokuBoard();
+	public static void main(String[] args)
+	{
+		SudokuBoard sg = new SudokuBoard();
 
 
-	// 	sg.createBoard(40);
-	// 	sg.printBoard();
-	// }
-
-	int[][]	board;
+		sg.createBoard(4);
+		sg.printBoard();
+	}
 }

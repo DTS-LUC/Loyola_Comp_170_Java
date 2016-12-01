@@ -13,8 +13,6 @@ public class SudokuSolution
 	public static final int HEIGHT = 9;
 
 
-
-
 	//	Constructor.  Resets board & solution to zero.
 	public SudokuSolution()
 	{
