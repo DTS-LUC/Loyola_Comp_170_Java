@@ -9,8 +9,8 @@ import java.util.*;
 
 class SudokuBoard
 {
-    public static final int WIDTH = 9;
-	public static final int HEIGHT = 9;
+    public static final int GRID_WIDTH = 9;
+	public static final int GRID_HEIGHT = 9;
 	public static final int HOLE = 0;
 	SudokuSolution solution;
 	Random rdm;
@@ -22,7 +22,7 @@ class SudokuBoard
 	public SudokuBoard()
 	{
         rdm = new Random();
-		board = new int[WIDTH][HEIGHT];
+		board = new int[GRID_WIDTH][GRID_HEIGHT];
 		solution = new SudokuSolution();
 	}
 
@@ -33,7 +33,7 @@ class SudokuBoard
 	//		The completed board is then returned
 	public int[][] createBoard(int blanks)
 	{
-		board = new int[WIDTH][HEIGHT];
+		board = new int[GRID_WIDTH][GRID_HEIGHT];
 		
 		newSolution();
 		createBlanks(blanks);
@@ -95,9 +95,9 @@ class SudokuBoard
 
 	private boolean isValid(int row, int col, int check)
 	{
-		for(int x = 0; x < WIDTH; x++)
+		for(int x = 0; x < GRID_WIDTH; x++)
 		{
-		    for(int y = 0; y < HEIGHT; y++)
+		    for(int y = 0; y < GRID_HEIGHT; y++)
 		    {
 				if(board[x][y] == HOLE)
 				{
@@ -135,6 +135,11 @@ class SudokuBoard
 		rowStart = (row / 3) * 3;
 		colStart = (col / 3) * 3;
 
+		if(numCheck > 9 || numCheck < 1)
+		{
+			return false;
+		}
+
 		for(int i = 0; i < 9; i++)
 		{
 			if(numCheck == board[row][i])	//	Check no repeats in row
@@ -154,6 +159,17 @@ class SudokuBoard
 		}
 
 		return true;
+	}
+
+	public boolean setValue(int row, int col, int value)
+	{
+		if(validMove(row, col, value))
+		{
+			board[row][col] = value;
+			return true;
+		}
+
+		return false;
 	}
 
 	public int getValue(int row, int col)

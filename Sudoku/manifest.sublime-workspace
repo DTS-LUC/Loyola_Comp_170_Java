@@ -1,0 +1,480 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"new",
+				"newBoard"
+			],
+			[
+				"p",
+				"pu\tpublic"
+			],
+			[
+				"m",
+				"main\tmethod (main)"
+			],
+			[
+				"J",
+				"JPanel"
+			],
+			[
+				"b",
+				"BasicSwing"
+			],
+			[
+				"in",
+				"inputArr"
+			],
+			[
+				"input",
+				"inputArr"
+			],
+			[
+				"c",
+				"col"
+			],
+			[
+				"te",
+				"testHole"
+			],
+			[
+				"pl",
+				"placed"
+			],
+			[
+				"pr",
+				"printSolution"
+			],
+			[
+				"ca",
+				"canSolve"
+			],
+			[
+				"board",
+				"boardCheck"
+			],
+			[
+				"bo",
+				"boardCheck"
+			],
+			[
+				"num",
+				"numPossible"
+			],
+			[
+				"Su",
+				"SudokuChecker"
+			],
+			[
+				"S",
+				"SudokuSolution"
+			],
+			[
+				"che",
+				"checkBoard"
+			],
+			[
+				"print",
+				"printSolution"
+			],
+			[
+				"s",
+				"sltn"
+			],
+			[
+				"val",
+				"validSudoku"
+			],
+			[
+				"retu",
+				"return"
+			],
+			[
+				"prin",
+				"printSolution"
+			],
+			[
+				"Sudo",
+				"SudokuSolution"
+			],
+			[
+				"next",
+				"nextInt"
+			],
+			[
+				"ro",
+				"row"
+			],
+			[
+				"co",
+				"col"
+			],
+			[
+				"cre",
+				"createBlanks"
+			],
+			[
+				"row",
+				"rowStart"
+			],
+			[
+				"n",
+				"numCheck"
+			],
+			[
+				"Nu",
+				"numCheck"
+			],
+			[
+				"wid",
+				"WIDTH"
+			],
+			[
+				"is",
+				"isValid"
+			],
+			[
+				"Sud",
+				"SudokuBoard"
+			],
+			[
+				"f",
+				"factorial"
+			],
+			[
+				"guess",
+				"guesses"
+			],
+			[
+				"e",
+				"elif\telse if"
+			],
+			[
+				"yea",
+				"yearsC"
+			],
+			[
+				"cit",
+				"citizenship"
+			],
+			[
+				"Ch",
+				"character"
+			],
+			[
+				"string",
+				"String"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"rep",
+				"rept"
+			],
+			[
+				"char",
+				"character"
+			],
+			[
+				"le",
+				"length"
+			],
+			[
+				"r",
+				"roundTwoDecimals"
+			],
+			[
+				"double",
+				"double"
+			],
+			[
+				"an",
+				"annual"
+			],
+			[
+				"j",
+				"j"
+			],
+			[
+				"for",
+				"for\tfor"
+			],
+			[
+				"D",
+				"DecimalFormat"
+			],
+			[
+				"mi",
+				"minute"
+			],
+			[
+				"strin",
+				"String"
+			],
+			[
+				"to",
+				"to"
+			],
+			[
+				"l",
+				"lP2"
+			],
+			[
+				"st",
+				"static"
+			],
+			[
+				"sy",
+				"System"
+			],
+			[
+				"wa",
+				"wallArea"
+			],
+			[
+				"ceiling",
+				"cielingArea"
+			],
+			[
+				"wall",
+				"wallMath"
+			],
+			[
+				"h",
+				"HappyBirthday"
+			],
+			[
+				"v",
+				"void"
+			],
+			[
+				"el",
+				"elif\telse if"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"javac BasicSwing.java"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/groot/Desktop/Sudoku.java",
+		"/Users/groot/Java/Sudoku/src/sudoku/PuzzleLogic/SudokuBoard.java",
+		"/Users/groot/Desktop/XOButton.java",
+		"/Users/groot/Desktop/TicTacToe.java",
+		"/Users/groot/Library/Application Support/Karabiner/private.xml",
+		"/Users/groot/Java/Swing/BasicSwing.java",
+		"/Users/groot/Java/Swing/SimpleEx.java",
+		"/Users/groot/Java/SimpleEx.java",
+		"/Users/groot/Java/Sudoku_Project/Old/untitled.java",
+		"/Users/groot/Java/Sudoku_Project/SudokuSolution.java",
+		"/Users/groot/Java/Sudoku_Project/Sudoku.java",
+		"/Users/groot/Java/Sudoku_Project/SudokuBoard.java",
+		"/Users/groot/Java/Sudoku_Project/isValid.java",
+		"/Users/groot/Desktop/FormatText.java",
+		"/Users/groot/Java/Sudoku_Project/Old/SudokuChecker.java",
+		"/Users/groot/Java/Sudoku_Project/SudokuChecker.java",
+		"/Users/groot/Java/Sudoku_Project/SudokuSolver.java",
+		"/Users/groot/Java/Sudoku_Project/Old/Sudoku.java",
+		"/Users/groot/Java/Sudoku_Project/SudokuGenerator.java",
+		"/Users/groot/Java/Sudoku_Project/isValidMethod.java",
+		"/Users/groot/Java/Sudoku_Project/Sudoku/src/SudokuGenerator.java",
+		"/Users/groot/Java/Sudoku_Project/Sudoku/src/Sudoku.java",
+		"/Users/groot/NetBeansProjects/Sudoku/src/Sudoku.java",
+		"/Users/groot/Downloads/nl/elridge/sudoku/model/UpdateAction.java",
+		"/Users/groot/Desktop/DebatePeerReview",
+		"/Users/groot/Desktop/People.java",
+		"/Users/groot/touchosc-editor-1.8.1-osx/layouts/Beatmachine.touchosc",
+		"/Users/groot/Java/PC_Factorial Recursion",
+		"/Users/groot/Java/interest.java",
+		"/Users/groot/Java/Factorial.java",
+		"/Users/groot/Java/Palindrome.java",
+		"/Users/groot/Java/isNumbersPresent.java",
+		"/Users/groot/Java/Election.java",
+		"/Users/groot/Java/holyDigits.java",
+		"/Users/groot/Java/Rock_Paper_Scissors.java",
+		"/Users/groot/Java/Painting.java",
+		"/Users/groot/Desktop/Test.java",
+		"/Users/groot/Desktop/Swag.java",
+		"/Users/groot/Desktop/POP Configuration details",
+		"/Users/groot/Java/largest.java",
+		"/Users/groot/Desktop/Time.java",
+		"/Users/groot/Desktop/Person.java",
+		"/Users/groot/Java/Dates.java",
+		"/Users/groot/Desktop/Problem4",
+		"/Users/groot/Desktop/Birthday.java",
+		"/Users/groot/Java/advancedConsole.java",
+		"/Users/groot/Java/Exam1.java",
+		"/Users/groot/Desktop/HappyBirthday.java",
+		"/Users/groot/Desktop/largest.java",
+		"/Users/groot/max7/README.md",
+		"/Users/groot/Desktop/Painting.java",
+		"/Users/groot/Desktop/happyBirthday.java",
+		"/Users/groot/Java/dream.java",
+		"/Users/groot/Desktop/http:::pornohub.su:rk-prime-realitykings-gina-gers"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"tfCells",
+			"userBoard"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"userBoard",
+			"tfCells",
+			"sltn"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "manifest.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Library/Application Support/Karabiner/private.xml"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
