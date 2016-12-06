@@ -12,7 +12,7 @@ public class SudokuSolution
 
 	public static final int WIDTH = 9;
 	public static final int HEIGHT = 9;
-
+	Random r = new Random();
 	int[][]	solution;
 
 
@@ -22,12 +22,11 @@ public class SudokuSolution
 		solution = new int[WIDTH][HEIGHT];
 	}
 
-	public int[][] makeNewSolution()
+	public void makeNewSolution()
 	{
 		solution = new int[WIDTH][HEIGHT];
 
 		fillCell(0,0);
-		return solution;
 	}
 
 
@@ -37,8 +36,6 @@ public class SudokuSolution
 		int nextX = x;
 		int nextY = y;
 		int[] toCheck = {1,2,3,4,5,6,7,8,9};
-
-		Random r = new Random();
 
 		int tmp = 0;
 		int current = 0;
@@ -130,14 +127,11 @@ public class SudokuSolution
 	{
 		return solution[row][col];
 	}
-
-
-        /*
-            public static void main(String[] args)
-            {
-                SudokuSolution sg = new SudokuSolution();
-                sg.makeNewSolution();
-                sg.printSolution();
-            }
-        */
+        
+//        public static void main(String[] args)
+//        {
+//            SudokuSolution sg = new SudokuSolution();
+//            sg.makeNewSolution();
+//            sg.printSolution();
+//        }
 }

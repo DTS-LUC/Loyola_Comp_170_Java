@@ -1,3 +1,5 @@
+package sudoku;
+
 import javax.swing.JPanel;
 import javax.swing.JFrame;
 import java.awt.GridLayout;
@@ -19,22 +21,23 @@ public class CellBox extends JPanel
 		for(int i = 0; i < 9; i++)
 		{
 			userCell[i] = new Cell();
-			add(userCell[i]);
+                        add(userCell[i]);
 		}
 	}
-
-	public void setCellValue(int value, boolean valid, int cellNum)
+        
+        public void setCell(int value, int type, int cellNum)
 	{
-		userCell[cellNum].setCellValue(value, valid);
+            userCell[cellNum].setCellValue(value, type);
+	}
+          
+	public void setInitial(int value, int type, int cellNum, int x, int y)
+	{
+            userCell[cellNum].setCellValue(value, type);
+            userCell[cellNum].setXY(x, y);
 	}
 
 	public int getCellValue(int cellNum)
 	{
 		return userCell[cellNum].getCellValue();
-	}
-
-	public void setInitialCellValue(int value, int cellNum)
-	{
-		userCell[cellNum].setInitialCellValue(value);
 	}
 }
