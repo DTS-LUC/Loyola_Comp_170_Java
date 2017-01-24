@@ -128,10 +128,10 @@ public class SudokuSolution
 		return solution[row][col];
 	}
         
-//        public static void main(String[] args)
-//        {
-//            SudokuSolution sg = new SudokuSolution();
-//            sg.makeNewSolution();
-//            sg.printSolution();
-//        }
+	public static void main(String[] args)
+	{
+		SudokuSolution sg = new SudokuSolution();
+		sg.makeNewSolution();
+		sg.printSolution();
+        }
 }
